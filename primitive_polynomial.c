@@ -48,9 +48,6 @@ int lfsr_period(int num, int arr[], int bitLen)
 
 void generate_primitive_poly(int deg){
     int l = pow(2,deg-1);
-    //int l = 1 << (deg-1);
-    //printf("%d\n",l);
-
     for(int j=1;j < l;j++){
         int tap = (1 << (deg-1)) | j;
 
@@ -87,7 +84,7 @@ void generate_primitive_poly(int deg){
     return;
 }
 void main(){
-    int maxDeg = 8;
+    int maxDeg = 16;
     for(int deg = 4; deg < maxDeg + 1 ; deg ++){
         printf("The primitive polynomials of deg %d are\n", deg);
         generate_primitive_poly(deg);
