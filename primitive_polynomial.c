@@ -76,7 +76,7 @@ void generate_primitive_poly(int deg){
             for(int j = 0; j < numtaps ; j++){
                 int coeff = tapArray[j];
                 printf("x^ %d + ",coeff);
-                //fflush( stdout );
+              
             }
             printf("1\n");
         }
